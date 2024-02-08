@@ -1,0 +1,91 @@
+:root {
+  --main-bg-color: #000000;
+  --main-text-color: #ffffff;
+  --border-hover-effect-color: #ab1822;
+  --star-wars-yellow: #feda4a;
+}
+
+/* Fun Star Wars Font! */
+@font-face {
+  font-family: Soloist, sans-serif;
+  src: url('./fonts/Soloist-Z6M8.otf');
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+a,
+a:hover,
+a:visited {
+  color: var(--main-text-color);
+  display: block;
+  text-decoration: none;
+  margin: 0.5rem auto;
+  width: fit-content;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+ul {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Hover Effect on links to mimic lightsaber */
+.border-btn::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--border-hover-effect-color);
+  transition: width 0.5s;
+}
+
+.border-btn:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+h1 {
+  font-family: Soloist;
+  color: var(--star-wars-yellow);
+}
+
+.characters-header {
+  font-size: 2rem;
+}
+
+.characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.crawl {
+  color: var(--star-wars-yellow);
+}
+
+a.btn {
+  background-color: var(--star-wars-yellow);
+  color: var(--main-bg-color);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+
+a.btn:hover {
+  filter: brightness(85%);
+}
